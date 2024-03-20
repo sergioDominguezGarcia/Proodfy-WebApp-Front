@@ -5,7 +5,9 @@ import { HeaderContainer, Logo } from "./styles";
 const Header = () => {
   return (
     <HeaderContainer>
-      <Logo>PROODFY</Logo>
+      <Logo
+        // img src="/proodfy.png" alt="" 
+      />
     </HeaderContainer>
   );
 };
