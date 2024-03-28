@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Link as DefaultLink } from "react-router-dom";
+
 export const LoginContainer = styled.div`
   /* display: flex; */
 `;
@@ -43,13 +44,20 @@ export const InputController = styled.div`
 export const Label = styled.label`
   font-weight: bold;
   margin-bottom: 5px;
+  color: orange;
 `;
 export const Input = styled.input`
   width: 100%;
+  max-width:250px;
   padding: 10px;
   border: 1px solid #e5d392;
   border-radius: 10px;
-  /* background: rgba(217, 217, 217, 0); */
+  ::placeholder,
+  ::-webkit-input-placeholder {
+    color: #ffffff; /* Color que desees para el placeholder */
+  }
+
+  background: rgba(217, 217, 217, 0);
 `;
 export const InputError = styled.span`
   color: red;
@@ -58,12 +66,13 @@ export const InputError = styled.span`
 `;
 export const Button = styled.button`
   width: 100%;
+  max-width: 270px;
   margin-top: 15px;
   padding: 10px;
   background: rgba(105, 38, 172, 0.5);
   color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
   display: block;
 `;

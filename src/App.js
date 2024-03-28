@@ -1,5 +1,6 @@
-import './App.css';
+import "./App.css";
 import Router from "../src/containers/router";
+
 function App() {
   return (
     <div className="App">

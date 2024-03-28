@@ -4,8 +4,9 @@ import Header from "../../../components/Header";
 import { Formik } from "formik";
 import useLogic from "./logic";
 import { initialValues, validationSignupSchema } from "./constants";
-const Login = () => {
-const { handleOnSubmit } = useLogic();
+
+const SignUp = () => {
+  const { handleOnSubmit } = useLogic();
   return (
     <S.LoginContainer>
       <Header />
@@ -30,25 +31,35 @@ const { handleOnSubmit } = useLogic();
             <S.Form onSubmit={handleSubmit}>
               <S.FormContent>
                 <S.InputController>
-                  <S.Label>Nombre</S.Label>
+                  <S.Label htmlFor="name"></S.Label>
                   <S.Input
+                    placeholder="Name..."
+                    autoComplete="true"
+                    id="name"
                     type="string"
-                    name="Nombre"
+                    name="name"
                     onChange={handleChange}
                   />
-                  {errors?.Nombre && (
-                    <S.InputError>{errors.email}</S.InputError>
-                  )}
+                  {errors?.name && <S.InputError>{errors.name}</S.InputError>}
                 </S.InputController>
                 <S.InputController>
-                  <S.Label>Email</S.Label>
-                  <S.Input type="email" name="email" onChange={handleChange} />
+                  <S.Label htmlFor="email"></S.Label>
+                  <S.Input
+                    placeholder="Email..."
+                    autoComplete="true"
+                    id="email"
+                    type="email"
+                    name="email"
+                    onChange={handleChange}
+                  />
                   {errors?.email && <S.InputError>{errors.email}</S.InputError>}
                 </S.InputController>
 
                 <S.InputController>
-                  <S.Label>Password</S.Label>
+                  <S.Label htmlFor="password"></S.Label>
                   <S.Input
+                    placeholder="Password..."
+                    id="password"
                     type="password"
                     name="password"
                     onChange={handleChange}
@@ -57,8 +68,8 @@ const { handleOnSubmit } = useLogic();
                     <S.InputError>{errors.password}</S.InputError>
                   )}
                 </S.InputController>
-                <S.Button type="submit">Login</S.Button>
-                <S.Link to="/signup">Create account</S.Link>
+                <S.Button type="submit">Signup</S.Button>
+
               </S.FormContent>
             </S.Form>
           )}
@@ -69,4 +80,4 @@ const { handleOnSubmit } = useLogic();
   );
 };
 
-export default memo(Login);
+export default memo(SignUp);
