@@ -15,6 +15,8 @@ const Login = () => {
         <S.H1>Monetizar</S.H1>
         <S.H1P>INFOPRODUCTOS</S.H1P> <S.H1>desde el día 1,</S.H1>{" "}
         <S.H1P> ES POSIBLE</S.H1P>
+        <S.H1> Crea cursos, tu comunidad, impacata a tu audiencia con email marketing y
+        mucho más...</S.H1>
         {/* -----FORMULARIO CON FORMIK------ */}
         <Formik
           initialValues={initialValues}

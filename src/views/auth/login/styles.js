@@ -51,8 +51,9 @@ export const Label = styled.label`
 export const Input = styled.input`
   width: 100%;
   padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: 1px solid #e5d392;
+  border-radius: 10px;
+  /* background: rgba(217, 217, 217, 0); */
 `;
 export const InputError = styled.span`
   color: red;
@@ -63,7 +64,7 @@ export const Button = styled.button`
   width: 100%;
   margin-top: 15px;
   padding: 10px;
-  background-color: #007bff;
+  background: rgba(105, 38, 172, 0.5);
   color: #fff;
   border: none;
   border-radius: 5px;
